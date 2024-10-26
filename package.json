@@ -19,6 +19,11 @@
     "format": "prettier --write .",
     "cspell": "cspell -c ./cspell.json './apps/*/src/**/*' './packages/*/src/**/*'"
   },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=6.0.0"
+  },
+  "packageManager": "pnpm@8.15.8",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
@@ -30,9 +35,5 @@
     "prettier": "^3.3.2",
     "rimraf": "^5.0.7",
     "turbo": "^2.0.4"
-  },
-  "engines": {
-    "node": ">=20",
-    "pnpm": ">=6.0.0"
   }
 }
