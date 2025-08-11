@@ -10,7 +10,7 @@
     "paths": {
       "~/*": ["./src/*"],
       "~": ["./src"],
-      "@firebase-monorepo/common": ["../../packages/common/src"]
+      "@mycollection/common": ["../../packages/common/src"]
     }
   },
   "compileOnSave": true,

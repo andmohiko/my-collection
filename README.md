@@ -33,10 +33,10 @@
 
 | type | name                                              | description 　　　　　　 | default port |
 | ---- | ------------------------------------------------- | ------------------------ | ------------ |
-| app  | [@firebase-monorepo/console](./apps/console/)     | 管理画面                 | ---          |
-| app  | [@firebase-monorepo/web](./apps/web/)             | Web アプリ本体           | ---          |
-| app  | [@firebase-monorepo/functions](./apps/functions/) | Cloud Functions          | ---          |
-| pkg  | [@firebase-monorepo/common](./packages/common/)   | 共通で使用する型定義など | ---          |
+| app  | [@mycollection/console](./apps/console/)     | 管理画面                 | ---          |
+| app  | [@mycollection/web](./apps/web/)             | Web アプリ本体           | ---          |
+| app  | [@mycollection/functions](./apps/functions/) | Cloud Functions          | ---          |
+| pkg  | [@mycollection/common](./packages/common/)   | 共通で使用する型定義など | ---          |
 
 ## 環境構築
 
