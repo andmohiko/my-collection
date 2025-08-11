@@ -5,9 +5,9 @@
 ## 技術構成
 
 - フロントエンド
-  - フレームワーク：Next.js Page Router
+  - フレームワーク：Next.js App Router
+  - スタイリング: Tailwind CSS + shad/cn
   - 言語：TypeScript
-  - コンポーネントライブラリ：Mantine
 - サーバーサイド
   - Cloud Functions for Firebase
   - 言語：TypeScript
