@@ -209,6 +209,9 @@ importers:
       firebase:
         specifier: ^11.10.0
         version: 11.10.0
+      firebase-admin:
+        specifier: ^13.4.0
+        version: 13.4.0
     devDependencies:
       '@firebase/rules-unit-testing':
         specifier: ^4.0.0
