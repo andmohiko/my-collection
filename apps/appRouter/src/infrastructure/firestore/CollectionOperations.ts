@@ -6,7 +6,14 @@ import type {
 } from '@mycollection/common'
 import { collectionCollection } from '@mycollection/common'
 import type { DocumentData, Unsubscribe } from 'firebase/firestore'
-import { doc, getDoc, onSnapshot, setDoc, updateDoc } from 'firebase/firestore'
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  onSnapshot,
+  updateDoc,
+} from 'firebase/firestore'
 
 import { db } from '~/lib/firebase'
 import { convertDate } from '~/utils/convertDate'
@@ -29,6 +36,7 @@ const convertCollectionFromData = (
 export const subscribeCollectionByIdOperation = (
   collectionId: CollectionId,
   setter: (collection: Collection | null) => void,
+  setIsLoading: (isLoading: boolean) => void,
 ): Unsubscribe => {
   const unsubscribe = onSnapshot(
     doc(db, collectionCollection, collectionId),
@@ -39,6 +47,7 @@ export const subscribeCollectionByIdOperation = (
       }
       const collection = convertCollectionFromData(snapshot.id, data)
       setter(collection)
+      setIsLoading(false)
     },
   )
   return unsubscribe
@@ -56,10 +65,9 @@ export const fetchCollectionByIdOperation = async (
 }
 
 export const createCollectionOperation = async (
-  collectionId: CollectionId,
   dto: CreateCollectionDto,
 ): Promise<void> => {
-  await setDoc(doc(db, collectionCollection, collectionId), dto)
+  await addDoc(collection(db, collectionCollection), dto)
 }
 
 export const updateCollectionOperation = async (
